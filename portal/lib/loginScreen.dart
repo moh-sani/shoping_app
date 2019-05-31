@@ -19,20 +19,23 @@ class _LoginScreenState extends State<LoginScreen> {
     final matricNumber = TextField(
       autofocus: false,
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.person),
           hintText: 'Registeration Number',
-          contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
           border:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
     );
 
     final password = TextField(
+      controller: TextEditingController(),
       obscureText: true,
       autofocus: false,
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.lock),
           hintText: 'Password',
-          contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
           border:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
     );
 
     final loginButton = Padding(
@@ -41,9 +44,9 @@ class _LoginScreenState extends State<LoginScreen> {
         borderRadius: BorderRadius.circular(30.0),
         shadowColor: Colors.lightGreenAccent.shade100,
         elevation: 5.0,
-        child: MaterialButton(
-          minWidth: 200.0,
-          height: 42.0,
+        child: RaisedButton(
+          //minWidth: 30.0,
+          //height: 40.0,
           onPressed: () {},
           color: Colors.green,
           child: Text(
@@ -60,6 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
         'Forgot password',
         style: TextStyle(
           color: Colors.green,
+          fontStyle: FontStyle.italic,
         ),
       ),
       onPressed: () {},
@@ -69,17 +73,43 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Center(
         child: ListView(
           shrinkWrap: true,
-          padding: EdgeInsets.only(left: 24.0, right: 24.0),
+          padding: EdgeInsets.only(left: 32.0, right: 32.0),
           children: <Widget>[
+          SizedBox(height: 15.0),
             logo,
-            SizedBox(height: 48.0),
+            SizedBox(height: 30.0),
+            WelcomeNote('Ahmadu Bello University'),
+            WelcomeNote('Portal'),
+            SizedBox(height: 50.0),
             matricNumber,
-            SizedBox(height: 8.0),
+            SizedBox(height: 15.0),
             password,
-            SizedBox(height: 24.0),
+            SizedBox(height: 30.0),
             loginButton,
             forgotButton
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class WelcomeNote extends StatelessWidget {
+  final String text;
+
+  const WelcomeNote(this.text);
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: 10.0),
+          child: Text(
+        text,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.green,
+          fontSize: 42.0,
+          fontStyle: FontStyle.normal,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
