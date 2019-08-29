@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "631466462773",
+    "firebase_url": "https://oagapp-5ad5c.firebaseio.com",
+    "project_id": "oagapp-5ad5c",
+    "storage_bucket": "oagapp-5ad5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631466462773:android:c1cb5ee6c7f9f44a",
+        "android_client_info": {
+          "package_name": "com.example.oag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631466462773-ihict4k1l5c0pemgngbpbt8ssqq480kh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1MM9W1yF1_UUW5uZZBM1OdDl3F2DxsSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631466462773-ihict4k1l5c0pemgngbpbt8ssqq480kh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

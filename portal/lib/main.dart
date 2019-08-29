@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
-import 'package:portal/loginScreen.dart';
 
-void main() => runApp(Portal());
+import 'login_screen.dart';
 
-final String server = 
-defaultTargetPlatform == TargetPlatform.android ? "10.0.2.2" : "localhost";
+void main() => runApp(MyApp());
 
-class Portal extends StatelessWidget {
-
+class MyApp extends StatelessWidget {
+  static const String _title = 'ABUR';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "A.B.U Portal",
-      debugShowCheckedModeBanner: false,
+      title: _title,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primaryColor: Colors.green,
+        primarySwatch: Colors.blue,
       ),
       home: LoginScreen(),
     );
